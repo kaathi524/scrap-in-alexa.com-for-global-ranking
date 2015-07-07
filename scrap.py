@@ -5,7 +5,7 @@ i=0;
 desiredurl = raw_input("Enter the url ");
 url= "https://www.alexa.com/siteinfo/"+desiredurl
 page = urllib2.urlopen(url)
-soup = BeautifulSoup(page.read())
+soup = BeautifulSoup(page.read(), "lxml")
 
 for pagetext in  soup.find_all('strong',{'class' : 'metrics-data align-vmiddle'}):
 #lines = [strong.get_text() for strong in pagetext]
