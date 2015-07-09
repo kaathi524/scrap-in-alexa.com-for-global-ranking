@@ -8,9 +8,7 @@ page = urllib2.urlopen(url)
 soup = BeautifulSoup(page.read(), "lxml")
 
 for pagetext in  soup.find_all('strong',{'class' : 'metrics-data align-vmiddle'}):
-#lines = [strong.get_text() for strong in pagetext]
-        while(i<1):
        
 		print "**********  GLOBAL RANK FOR",desiredurl,"*********"; 
 		print pagetext.text
-        	i=i+1;
+                break;
